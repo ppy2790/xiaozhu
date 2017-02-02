@@ -3,8 +3,6 @@
 from scrapy.spiders import CrawlSpider
 from scrapy.http import Request, FormRequest
 from scrapy.selector import Selector
-from xiaozhu.items import XiaozhuItem
-
 
 import sys
 
@@ -21,8 +19,6 @@ class XiaozhuSpider(CrawlSpider):
 
     def parse(self, response):
         selector = Selector(response)
-
-        item = XiaozhuItem()
 
         infos = selector.xpath("//ul[@class='pic_list clearfix']/li")
 
