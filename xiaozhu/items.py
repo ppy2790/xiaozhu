@@ -9,7 +9,11 @@ from scrapy.item import Field,Item
 
 
 class XiaozhuItem(Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    name = Field()
+
+    url = Field()
     price = Field()
+    rent_type = Field()
+    beds = Field()
+    num_of_people = Field()
+    star = Field()
+    comment_num = Field()
